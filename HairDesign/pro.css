@@ -140,7 +140,7 @@ body {
         .we-us {
           max-width: 1200px;
           height: 500px;
-          margin: 0 auto;
+          margin: 60px auto 1px auto;
           padding: 20px;
           position: relative;
           overflow: hidden;
@@ -278,7 +278,6 @@ body {
    
   #about {
     height: 500px;
-   
    padding: 60px 20px;
        }
           #about h2{
@@ -294,16 +293,25 @@ body {
           }
           
           .col {
-              flex: 1;
-              font-size: 18px;
-              line-height: 1.6;
-              text-align: center;
-              background: #f9f9f9;
-              border-radius: 12px;
-              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-              padding: 20px;
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-          }
+            flex: 1;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+            background: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: bounce 2s ease-in-out 1; /* 2 saniye sürer, 1 kez oynar */
+        }
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0); /* Başlangıç ve bitiş noktası */
+    }
+    50% {
+      transform: translateY(-25px); /* Yukarı zıplama */
+    }
+  }
           
           .col:hover {
               transform: translateY(-10px);

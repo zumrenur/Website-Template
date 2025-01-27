@@ -112,10 +112,36 @@ body {
 }
 
 .innovation-section .image img, .trust-section .image img {
-  max-width: 100%;
+  max-width: 70%;
   height: 400px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transform: translateX(50%); /* Başlangıçta sağda */
+      animation: slideIn 2s ease-out forwards;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(50%); /* Sağdan başla */
+  }
+  to {
+    transform: translateX(30%); /* Orta noktaya gel */
+  }
+}
+.trust-section .image img{
+  max-width: 80%;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transform: translateX(-50%); /* Başlangıçta sağda */
+      animation: sldIn 2s ease-out forwards;
+}
+@keyframes sldIn {
+  from {
+    transform: translateX(-50%); /* Sağdan başla */
+  }
+  to {
+    transform: translateX(-30%); /* Orta noktaya gel */
+  }
 }
 
 .innovation-section .value h3, .trust-section .value h3 {
